@@ -5,3 +5,5 @@
 - clear
 - prefix
 - say
+- kick
+- ban
