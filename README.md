@@ -11,4 +11,4 @@ Eu tenho comandos úteis para seu servidor! Mas ainda estou na minha versão Bet
 
 ## Futuro da Pands:
 
-- Logo, logo comandos de xp, punições, comando /ajuda e muito mais!
+- Logo, logo comandos de xp...
