@@ -21,8 +21,18 @@ async def clear(ctx, msgs=1):
 async def prefix(ctx):
     await ctx.send(f'Meu prefixo é {client}')
 
-@clientt.command()
+@client.command()
 async def say(ctx, arg):
     await ctx.send(f'{arg}')
+
+@client.command()
+async def kick(ctx, member : discord.Member, *, reason=None):
+    await member.kick(reason=reason)
+    await ctx.send("O usuário foi expulso!")
+
+@client.command()
+async def ban(ctx, member : discord.Member, *, reason=None):
+    await member.ban(reason=reason)
+    await ctx.send("O usuário foi banido!")
 
 client.run('NzY0NjU1OTExNjMzMDI3MDky.X4JbTw._nFs91rqmWBnzEi8tDgIr94LyQc')
