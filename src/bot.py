@@ -28,7 +28,7 @@ async def say(ctx, arg):
 @client.command()
 async def kick(ctx, member : discord.Member, *, reason=None):
     await member.kick(reason=reason)
-    await ctx.send("O usuário foi expulso por `{reason}`!")
+    await ctx.send(f"O usuário foi expulso por `{reason}`!")
 
 @client.command()
 async def ban(ctx, member : discord.Member, *, reason=None):
