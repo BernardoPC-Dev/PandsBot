@@ -28,11 +28,11 @@ async def say(ctx, arg):
 @client.command()
 async def kick(ctx, member : discord.Member, *, reason=None):
     await member.kick(reason=reason)
-    await ctx.send("O usuário foi expulso!")
+    await ctx.send("O usuário foi expulso por `{reason}`!")
 
 @client.command()
 async def ban(ctx, member : discord.Member, *, reason=None):
     await member.ban(reason=reason)
-    await ctx.send("O usuário foi banido!")
+    await ctx.send(f"O usuário foi banido por `{reason}`!")
 
-client.run('NzY0NjU1OTExNjMzMDI3MDky.X4JbTw._nFs91rqmWBnzEi8tDgIr94LyQc')
+client.run('Token que eu não vou revelar uwu')
