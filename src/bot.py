@@ -56,6 +56,26 @@ async def unban(ctx, member : discord.Member):
     await member.unban()
     await ctx.send("O banimento do usuário foi retirado!")
 
+# Create-Channel Command
+
+@client.command()
+async def create-channel(ctx, channel):
+    await guild.create_text_channel(channel)
+    await ctx.send("Canal criado!")
+
+# Nickname Command
+
+@client.command()
+async def nickname(ctx, nickname):
+    await member.edit(nickname)
+    await ctx.send("O apelido foi alterado!")
+
+# Clear-Reactions
+
+@client.command()
+async def clear-reactions(ctx, message)
+    await message.clear_reactions()
+    await ctx.send("As reações da mensagem foram apagadas!")
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
