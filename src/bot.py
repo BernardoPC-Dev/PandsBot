@@ -76,6 +76,21 @@ async def nickname(ctx, nickname):
 async def clear-reactions(ctx, message)
     await message.clear_reactions()
     await ctx.send("As reações da mensagem foram apagadas!")
+
+# Softsay Command
+
+@client.command()
+async def softsay(ctx, channel, *, msg):
+    await ctx.channel.send(f'{msg}')
+    await ctx.send(f'Mensagem enviada em {channel}!')
+
+# Star Secret-Command
+
+@client.command()
+async def star(ctx):
+    await ctx.send(':star:')
+    await ctx.add_reaction(':star:')
+
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
