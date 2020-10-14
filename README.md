@@ -12,5 +12,6 @@ Eu tenho comandos úteis para seu servidor! Mas ainda estou na minha versão Bet
 ## Futuro da Pands🐼:
 
 - Logo, logo comandos de xp⬆️...
+- Logo, logo comandos de música🎵...
 
 - Atualmente estou dormindo😴, mas logo acordarei🌞!
