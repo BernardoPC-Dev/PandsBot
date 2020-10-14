@@ -88,7 +88,7 @@ async def softsay(ctx, channel, *, msg):
 
 @client.command()
 async def star(ctx):
-    await ctx.send(':star:')
+    await ctx.send('Você é uma estrela! :star:!')
     await ctx.add_reaction(':star:')
 
 # Ask Command
