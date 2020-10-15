@@ -119,7 +119,7 @@ async def invite(ctx):
 # Setwelcome Command
 @client.command()
 @commands.has_permissions(manage_server=True)
-async def setwelcome(ctx, channel, msg):
+async def setwelcome(ctx, channel, msg, member : discord.Member=None):
     import welcome
 # Run Bot
 
