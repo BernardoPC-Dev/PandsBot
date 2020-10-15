@@ -110,6 +110,11 @@ async def ask(ctx, question):
     rdm = randint(1, 2)
     await ctx.send(f'Você perguntou: {question}, e a resposta é: {resp[rdm]}!')
 
+# Invite Command
+
+@client.command()
+async def invite(ctx):
+    await ctx.send('Para me convidar para seu servidor, clique no link abaixo e leia o README.md dela.\n\n https://github.com/bernardopc-dev/PandsBot')
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
