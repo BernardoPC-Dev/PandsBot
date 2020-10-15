@@ -18,69 +18,79 @@ async def roll(ctx, *, n):
     await ctx.send(f'Eu rolei {n} e caiu o número {number}!')
 
 # Clear Command
-# Add Perm
+
 @client.command()
+@commands.has_permission(manage_messages=True)
 async def clear(ctx, msgs=1):
     await ctx.channel.parge(limit-msgs)
 
 # Prefix Command
 
 @client.command()
+@commands.has_permission(manage_server=True)
 async def setprefix(ctx, nv-prefixo):
     client = commands.Bot(command_prefix = nv-prefixo)
     await ctx.send(f'Prefixo alterado para: {nv-prefixo} com sucesso!')
 
 # Say Command
-# Add Perm
+
 @client.command()
+@commands.has_permission(manage_messages=True)
 async def say(ctx, arg):
     await ctx.send(f'{arg}')
 
 # Kick Command
-# Add Perm
+
 @client.command()
+@commands.has_permission(kick_members=True)
 async def kick(ctx, member : discord.Member, *, reason=None):
     await member.kick(reason=reason)
     await ctx.send(f"O usuário foi expulso por `{reason}`!")
 
 # Ban Command
-# Add Perm
+
 @client.command()
+@commands.has_permission(ban_members=True)
 async def ban(ctx, member : discord.Member, *, reason=None):
     await member.ban(reason=reason)
     await ctx.send(f"O usuário foi banido por `{reason}`!")
 
 # Unban Command
-# Add Perm
+
 @client.command()
+@commands.has_permission(ban_members=True)
 async def unban(ctx, member : discord.Member):
     await member.unban()
     await ctx.send("O banimento do usuário foi retirado!")
 
 # Create-Channel Command
-# Add Perm
+
 @client.command()
+@commands.has_permission(manage_channels=True)
 async def create-channel(ctx, channel):
     await guild.create_text_channel(channel)
     await ctx.send("Canal criado!")
 
 # Nickname Command
-# Add Perm
+
 @client.command()
+@commands.has_permission(change_nickname=True)
 async def nickname(ctx, nickname):
     await member.edit(nickname)
     await ctx.send("O apelido foi alterado!")
 
 # Clear-Reactions
-# Add Perm
+
 @client.command()
+@commands.has_permission(manage_messages=True)
 async def clear-reactions(ctx, message)
     await message.clear_reactions()
     await ctx.send("As reações da mensagem foram apagadas!")
 
 # Softsay Command
-# Add Perm
+
 @client.command()
+@commands.has_permission(manage_messages=True)
 async def softsay(ctx, channel, *, msg):
     await ctx.channel.send(f'{msg}')
     await ctx.send(f'Mensagem enviada em {channel}!')
