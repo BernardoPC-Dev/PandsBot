@@ -115,6 +115,12 @@ async def ask(ctx, question):
 @client.command()
 async def invite(ctx):
     await ctx.send('Para me convidar para seu servidor, clique no link abaixo e leia o README.md dela.\n\n https://github.com/bernardopc-dev/PandsBot')
+
+# Setwelcome Command
+@client.command()
+@commands.has_permissions(manage_server=True)
+async def setwelcome(ctx, channel, msg):
+    import welcome
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
