@@ -116,6 +116,11 @@ async def ask(ctx, question):
 async def invite(ctx):
     await ctx.send('Para me convidar para seu servidor, clique no link abaixo e leia o README.md dela.\n\n https://github.com/bernardopc-dev/PandsBot')
 
+# Pin Command
+
+async def pin(ctx, id):
+    await message.pin(id)
+    await ctx.send('Mensagem fixada!')
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
