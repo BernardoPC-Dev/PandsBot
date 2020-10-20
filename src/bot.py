@@ -28,8 +28,8 @@ async def clear(ctx, msgs=1):
 
 @client.command()
 @commands.has_permission(manage_server=True)
-async def setprefix(ctx, nv-prefixo):
-    client = commands.Bot(command_prefix = nv-prefixo)
+async def setprefix(ctx, nvprefixo):
+    client = commands.Bot(command_prefix = nvprefixo)
     await ctx.send(f'Prefixo alterado para: {nv-prefixo} com sucesso!')
 
 # Say Command
@@ -118,9 +118,19 @@ async def invite(ctx):
 
 # Pin Command
 
+@client.command()
+@commands.has_permission(manage_messages=True)
 async def pin(ctx, id):
     await message.pin(id)
     await ctx.send('Mensagem fixada!')
+
+# Unpin Command
+
+@client.command()
+@commands.has_permission(manage_messages=True)
+async def unpin(ctx, msg):
+    await message.unpin(msg)
+    await ctx.send('Mensagem desfixada!')
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
