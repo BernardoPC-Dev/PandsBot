@@ -107,7 +107,7 @@ async def star(ctx):
 @client.command()
 async def ask(ctx, question):
     resp = (':+1:', ':-1:')
-    rdm = randint(1, 2)
+    rdm = randint(0, 1)
     await ctx.send(f'Você perguntou: {question}, e a resposta é: {resp[rdm]}!')
 
 # Invite Command
@@ -132,6 +132,13 @@ async def unpin(ctx, msg):
     await message.unpin(msg)
     await ctx.send('Mensagem desfixada!')
 
+# Coinflip Command
+
+@client.command()
+async def coinflip(ctx):
+    coin = randint(0, 1)
+    lados = ["Cara", "Coroa"]
+    await ctx.send(f':coin: {lados[coin]}')
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
