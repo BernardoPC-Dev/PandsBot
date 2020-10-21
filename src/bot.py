@@ -63,11 +63,11 @@ async def unban(ctx, member : discord.Member):
     await member.unban()
     await ctx.send("O banimento do usuário foi retirado!")
 
-# Create-Channel Command
+# CreateChannel Command
 
 @client.command()
 @commands.has_permission(manage_channels=True)
-async def create-channel(ctx, channel):
+async def createchannel(ctx, channel):
     await guild.create_text_channel(channel)
     await ctx.send("Canal criado!")
 
@@ -79,11 +79,11 @@ async def nickname(ctx, nickname):
     await member.edit(nickname)
     await ctx.send("O apelido foi alterado!")
 
-# Clear-Reactions
+# ClearReactions
 
 @client.command()
 @commands.has_permission(manage_messages=True)
-async def clear-reactions(ctx, message)
+async def clearreactions(ctx, message)
     await message.clear_reactions()
     await ctx.send("As reações da mensagem foram apagadas!")
 
@@ -131,6 +131,7 @@ async def pin(ctx, id):
 async def unpin(ctx, msg):
     await message.unpin(msg)
     await ctx.send('Mensagem desfixada!')
+
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
