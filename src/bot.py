@@ -138,7 +138,7 @@ async def unpin(ctx, msg):
 async def coinflip(ctx):
     coin = randint(0, 1)
     lados = ["Cara", "Coroa"]
-    await ctx.send(f':coin: {lados[coin]}')
+    await ctx.send(f':coin: {lados[coin]}!')
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
