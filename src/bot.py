@@ -102,13 +102,13 @@ async def star(ctx):
     await ctx.send('Você é uma estrela! :star:!')
     await ctx.add_reaction(':star:')
 
-# Ask Command
+# 8ball Command
 
 @client.command()
-async def ask(ctx, question):
-    resp = (':+1:', ':-1:')
-    rdm = randint(0, 1)
-    await ctx.send(f'Você perguntou: {question}, e a resposta é: {resp[rdm]}!')
+async def 8ball(ctx, question):
+    resp = (':+1:', ':-1:', 'Talvez', 'Provavelmente Sim', 'Provavelmente Não', 'Não sei'.)
+    rdm = randint(0, 5)
+    await ctx.send(f'{resp[rdm]}')
 
 # Invite Command
 
