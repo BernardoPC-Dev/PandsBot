@@ -37,7 +37,7 @@ async def setprefix(ctx, nvprefixo):
 @client.command()
 @commands.has_permission(manage_messages=True)
 async def say(ctx, arg):
-    await ctx.send(f'{arg}')
+    await ctx.send(f'Comando em manutenção!')
 
 # Kick Command
 
