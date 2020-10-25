@@ -3,6 +3,7 @@ from discord.ext import commands
 from random import randint
 
 client = commands.Bot(command_prefix = '/')
+bio = "Você não possui biografia!"
 
 # Ping Command
 
@@ -139,6 +140,20 @@ async def coinflip(ctx):
     coin = randint(0, 1)
     lados = ["Cara", "Coroa"]
     await ctx.send(f':coin: {lados[coin]}!')
+
+# Setbio Command
+
+@client.command()
+async def setbio(ctx, newbio):
+    bio = newbio
+    await ctx.send('Biografia Alterada com sucesso!')
+
+# Mybio Command
+
+@client.command()
+async def mybio(ctx):
+    await ctx.send(bio)
+
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
