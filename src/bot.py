@@ -154,6 +154,13 @@ async def setbio(ctx, newbio):
 async def mybio(ctx):
     await ctx.send(bio)
 
+# Ppt Command
+
+@client.command()
+async def ppt(ctx):
+    pptVal = randint(1,3)
+    ppts = ['Pedra', 'Papel', 'Tesoura']
+    await ctx.send(f'Eu escolhi {ppts[pptVal]}!')
 # Run Bot
 
 client.run('Token que eu não vou revelar uwu')
