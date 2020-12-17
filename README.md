@@ -1,4 +1,5 @@
 # PandsBot🐼
+## SERÁ LANÇADA QUANDO ACHARMOS UMA HOST
 Olá! Eu sou uma panda chamada Pands, sou feita em Python🐍 e meu prefixo é /
 
 - Quer doar💵 para mim? Então entre em contato com meu pai🤵 por Instagram: @bernardopc_dev
