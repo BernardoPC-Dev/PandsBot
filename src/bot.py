@@ -161,6 +161,7 @@ async def ppt(ctx):
     pptVal = randint(1,3)
     ppts = ['Pedra', 'Papel', 'Tesoura']
     await ctx.send(f'Eu escolhi {ppts[pptVal]}!')
-# Run Bot
+
+# Run Bot ----------
 
 client.run('Token que eu não vou revelar uwu')
